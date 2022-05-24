@@ -7,11 +7,6 @@ if @user.present?
     json.full_address @user.address
     json.since @user.created_at
   end
-  json.ignore_nil!
-  json.dummy do |json|
-    json.foo "bar"
-    json.lol nil
-  end
 
 else
   json.SoftRemainder do
